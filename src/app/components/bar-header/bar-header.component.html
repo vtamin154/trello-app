@@ -1,3 +1,103 @@
-<nav class="h-bar-header">
-  <a routerLink="/home">Home</a>
+<nav class="bg-gray-800 h-bar-header px-4 flex items-center">
+  <a
+    routerLink="/home"
+    class="flex block items-center py-2 mr-3 text-md font-medium text-gray-300 hover:text-gray-100 hover:text-white"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"
+      />
+    </svg>
+    <span>Trello</span>
+  </a>
+  <app-work-spaces></app-work-spaces>
+  <a
+    routerLink="/user"
+    class="px-3 py-2 text-md font-medium text-gray-300 hover:text-gray-100 hover:text-white"
+    >User</a
+  >
+  <button
+    class="text-md font-medium text-gray-300 rounded-md outline outline-1 px-3 py-1 hover:text-gray-100 hover:text-white"
+  >
+    Create
+  </button>
+  <input
+    class="ml-auto bg-transparent text-white border rounded-md border-gray-300 px-3 py-1 hover:border-gray-100 focus:outline-none"
+    placeholder="Search..."
+  />
+
+  <button
+    data-tooltip-target="tooltip-notify"
+    data-tooltip-placement="bottom"
+    type="button"
+    class="relative ml-3 inline-flex items-center text-sm font-medium text-gray-300 text-center hover:text-gray-100 hover:text-white focus:ring-4 focus:outline-none dark:focus:ring-transparent"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+      />
+    </svg>
+    <span class="sr-only">Notifications</span>
+    <span
+      class="animate-ping absolute inline-flex items-center justify-center w-2 h-2 text-xs font-bold text-white bg-red-500 rounded-full -top-0 -end-2 dark:border-gray-900"
+    ></span>
+  </button>
+  <div
+    id="tooltip-notify"
+    role="tooltip"
+    class="absolute invisible z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+  >
+    Tooltip content
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+
+  <button
+    class="block ml-4 text-md font-medium text-gray-300 hover:text-gray-100 hover:text-white"
+  >
+    <svg
+      data-tooltip-target="tooltip-animation"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+      />
+    </svg>
+  </button>
+
+  <div
+    id="tooltip-animation"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+  >
+    Help
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+
+  <app-profiles></app-profiles>
+  <app-themes></app-themes>
 </nav>

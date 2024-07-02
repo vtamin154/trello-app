@@ -1,0 +1,18 @@
+<!-- <mat-form-field
+  appearance="fill"
+  class="text-md font-medium text-gray-300 hover:text-gray-100 hover:text-white"
+>
+  <mat-select [(ngModel)]="selectedTheme" (change)="toggleTheme($event)">
+    <mat-option *ngFor="let theme of themes" [value]="theme">
+      {{ theme }}
+    </mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+<!-- <button (click)="toggleTheme()">Toggle Theme</button> -->
+
+<div class="ml-3 w-24 text-gray-300 hover:text-gray-100 hover:text-white">
+  <mat-slide-toggle (toggleChange)="toggleTheme()">{{
+    currentTheme
+  }}</mat-slide-toggle>
+</div>

@@ -10,6 +10,9 @@ module.exports = {
         "calc-content":
           "calc(100vh - var(--heigh-header) - var(--heigh-footer) - var(--heigh-bar-header))",
       },
+      width: {
+        "custom-50": "var(--width-50)",
+      },
     },
   },
   plugins: [],
