@@ -13,6 +13,12 @@ module.exports = {
       width: {
         "custom-50": "var(--width-50)",
       },
+      backgroundColor: {
+        "blue-color-1": "var(--blue-color-1)",
+      },
+      ringColor: {
+        "blue-color-1": "var(--blue-color-1)",
+      },
     },
   },
   plugins: [],

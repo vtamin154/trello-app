@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-board-bar',
@@ -7,8 +8,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class BoardBarComponent implements OnInit {
-  constructor() {}
+  constructor(private userService: UserService) {}
 
+  users: any = [];
   //create ripple effect for button
   createRipple(event: MouseEvent) {
     const button = event.currentTarget as HTMLElement;
@@ -32,5 +34,9 @@ export class BoardBarComponent implements OnInit {
     button.appendChild(circle);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userService.getUser().subscribe((user) => {
+      this.users = user;
+    });
+  }
 }
