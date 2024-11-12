@@ -20,8 +20,11 @@
         </svg>
       </button>
       <ul
+        class="pull-down z-10 absolute mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg"
         *ngIf="menuOpen"
-        class="pull-down absolute mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg"
+        appCloseDropdown
+        [appOutSideClick]="menuOpen"
+        (outSideClick)="menuOpen = false"
       >
         <li
           class="flex items-center px-4 py-2 hover:bg-gray-100"
